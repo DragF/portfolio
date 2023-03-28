@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquareNeo@1.0/nanumsquareneo.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            overflow: auto;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            background-color: #f2f2f2;
+            border: none;
+            width: 500px;
+            height: 60px;
+            padding: 5px 10px;
+            outline: none;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        input[type="text"]:focus {
+            background-color: white;
+            border: 1px solid skyblue;
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .btn3 {
+            width: 200px;
+            height: 60px;
+            background-color:#e30613;
+            color: white;
+            border: 1px solid #dddddd;
+        }
+
+        .contact1 .btn4 {
+            width: 200px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid #dddddd;
+        }
+
+        @media(max-width:1024px) {
+            .contact1 .btn-group {
+                display: flex;
+            }
+
+            .contact1 .btn3,
+            .btn4 {
+                width: 50%;
+            }
+        }
+
+        .sub-title {
+            width: 100%;
+            height: 60vh;
+        }
+
+        .sub-title img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sub-title .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .sub-title .text-box h1 {
+            font-size: 50px;
+            line-height: 80px;
+        }
+
+        .sub-title .text-box h4 {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .contact1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .contact1::before {
+            content:''; 
+            display:block; 
+            position:absolute; 
+            width:100%; 
+            height:1px;
+            background-color:#dddddd;
+            top:60px;
+            left:0;
+        }
+        .contact1 .navi {
+            width: 90%;
+            max-width:1400px;
+            margin:0 auto;
+            display: flex;
+            height: 60px;
+            /*padding: 0 100px;*/
+        }
+
+        .contact1 .icon {
+            height: 60px;
+            width: 60px;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .contact1 .q-menu {
+            display: flex;
+            text-indent: 30px;
+            z-index: 20;
+        }
+
+        .contact1 .q-menu .q-menu-li {
+            width: 200px;
+            line-height: 60px;
+        }
+
+        .contact1 .q-menu .q-menu-li img {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .contact1 .q-menu .sub-ul {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            display: none;
+            width: 100%;
+        }
+
+        .contact1 .q-menu .sub-li {
+            width: 100%;
+            height: 60px;
+            border: 1px solid #dddddd;
+            background-color: white;
+        }
+
+        .contact1 .q-menu .sub-li:hover {
+            background-color: #e30613;
+            color: white;
+        }
+
+        .contact1 .qml2 {}
+
+        .contact1 .qml2>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #e30613;
+            color: white;
+        }
+
+        .contact1 .container {
+            width: 100%;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact1 .text-box h1 {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .contact1 .text-box {
+            width: 100%;
+        }
+
+        .contact1 .btn-group {
+            width: 100%;
+        }
+
+        @media(max-width:1024px) {
+            .contact1 .navi {
+                padding: 0;
+            }
+
+            .contact1 .icon {
+                height: 60px;
+                width: 60px;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+
+            .contact1 .q-menu .q-menu-li {
+                width: 150px;
+            }
+        }
+
+        .contact2 {
+            height: 100%;
+        }
+
+        .contact2 .small {
+            display: block;
+            width: 100%;
+            text-align: right;
+            margin-bottom: 15px;
+            font-size: 12px;
+        }
+
+        .contact2 .section-title h1 {
+            font-size: 36px;
+        }
+
+        .contact2 .section-title h1::before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+
+        .contact2 .section-title h5 {
+            margin: 30px 0;
+            font-size: 18px;
+        }
+
+        .contact2 .item-group {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 200px auto;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .contact2 .item {
+            border-bottom: 1px solid #dddddd;
+            height: 100%;
+            min-height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-sizing: border-box;
+            padding: 15px 20px 15px 0;
+        }
+
+        .contact2 .item sup {
+            color: #e30613;
+            margin-right: 5px;
+        }
+
+        .contact2 .item-2 label {
+            margin-right: 20px;
+        }
+
+        .contact2 .item-2 {
+            display: flex;
+        }
+
+
+        .contact2 .item-10 {
+            padding-right: 20px;
+        }
+
+        .contact2 .item-10 .mail-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .contact2 .item-10 .mail-box .mail {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 70%;
+        }
+
+        .contact2 .item-10 .mail-box select {
+            width: 30%;
+            height: 60px;
+            text-indent: 15px;
+        }
+
+        .contact2 .item-12 {
+            padding-right: 20px;
+        }
+
+        .contact2 .item-12 input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact2 .item-13,
+        .contact2 .item-14 {
+            height: 100%;
+            padding: 15px 0;
+            box-sizing: border-box;
+        }
+
+        .contact2 .item-14 {
+            padding-right: 20px;
+        }
+
+        .contact2 textarea {
+            width: 100%;
+            background-color: #f2f2f2;
+            border: none;
+            padding: 5px 10px;
+            outline: none;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        .contact2 textarea:focus {
+            background-color: white;
+            border: 1px solid skyblue;
+        }
+
+        .contact2 .item-16 {
+            display: block;
+            padding: 20px 0 0 0;
+            border-bottom: none;
+        }
+
+        .contact2 .item-15 {
+            border-bottom: none;
+        }
+
+        .contact2 .item-16 {
+            height: 100%;
+        }
+
+        .contact2 .item-16 .file-box {
+            display: flex;
+        }
+
+        .contact2 .item-16 .box {
+            width: 500px;
+            height: 60px;
+            background-color: #f2f2f2;
+        }
+
+        .contact2 .item-16 input {
+        }
+
+        .contact2 .item-16 .min {
+            display: block;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        @media(max-width:1024px) {
+            .contact2 .item-group {
+                display: block;
+            }
+
+            .contact2 .item {
+                min-height: 50px;
+            }
+
+            .contact2 .item-1 {
+                height: 50px;
+            }
+
+            .contact2 .item-2 label {
+                margin-right: 5px;
+                font-size: 14px;
+            }
+
+            .contact2 .item-3 {
+                height: 50px;
+            }
+
+            .contact2 .item-5 {
+                height: 50px;
+            }
+
+            .contact2 .item-7 {
+                height: 50px;
+            }
+
+            .contact2 .item-9 {
+                height: 50px;
+            }
+
+            .contact2 .item-10 {
+                height: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .contact2 .item-10 .mail-box {
+                display: block;
+            }
+
+            .contact2 .item-10 .mail-box .mail {
+                display: flex;
+                width: 100%;
+            }
+
+            .contact2 .item-10 .mail-box input {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .contact2 .item-10 .mail-box .box {
+                line-height: 60px;
+                align-self: start;
+            }
+
+            .contact2 .item-10 .mail-box select {
+                height: 60px;
+                grid-column: span 3;
+                width: 100%;
+            }
+
+            .contact2 .item-11 {
+                height: 50px;
+            }
+
+            .contact2 .item-13 {
+                height: 50px;
+            }
+
+            .contact2 .item-15 {
+                border-bottom: 1px solid #dddddd;
+                height: 60px;
+            }
+        }
+
+        .contact3 {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            height: 100%;
+        }
+
+        .contact3 .text-box {
+            border: 1px solid #e0e0e0;
+            background-color: #f2f2f2;
+            padding: 50px;
+            box-sizing: border-box;
+            margin-top: 50px;
+        }
+
+        .contact3 .text-box h5 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .contact3 .text-box p {
+            font-size: 14px;
+            line-height: 22px;
+            color: #999999;
+        }
+
+        .contact3 .item {
+            text-align: center;
+        }
+
+        .contact3 .ch-btn {
+            display: none;
+        }
+
+        .contact3 label {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .contact3 .check-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact3 .check-box i {
+            opacity: 0;
+            color: navy;
+        }
+
+        .contact3 .ch-btn:checked+label .check-box i {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a class="home" href="index.html">
+                <img src="img/globa_logo.png" alt="logo" class="white">
+            </a>
+        </div>
+        <div class="menu-bg"></div>
+        <ul class="menu">
+            <li class="menu-li">
+                <a href="#">제품소개</a>
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <a href="#">밀링</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">드릴링</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">쓰레딩</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">터닝</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="contact.html">고객지원</a>
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <a href="#">카탈로그</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">제품찾기</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">온라인 주문</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">Q&A</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">자료실</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="#">뉴스&미디어</a>
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <a href="#">YG-1 뉴스</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">비디오</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">전시회</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">홍보자료</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="introduce.html">회사소개</a>
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <a href="#">YG-1 소개</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">비전&미션</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">연혁</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">CEO</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">사업장소개</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">재무정보</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">윤리강령</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">사이버 감사실</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">공지사항</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="#">인재채용</a>
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <a href="#">채용안내</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">채용공고</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">입사지원</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">합격조회</a>
+                    </li>
+                    <li class="sub-li">
+                        <a href="#">채용문의</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ham-btn">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+        </div>
+    </header>
+    
+    <aside class="site-map">
+        <div class="item item-1">
+            <img src="img/yg1_main_visual18.jpg" alt="sitemapimg">
+        </div>
+        <div class="item item-2">
+            <ul class="menu">
+                <li class="menu-li">
+                    <a href="#">제품소개</a>
+                    <ul class="sub-ul">
+                        <li class="sub-li">
+                            <a href="#">밀링</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">드릴링</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">쓰레딩</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">터닝</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="contact.html">고객지원</a>
+                    <ul class="sub-ul">
+                        <li class="sub-li">
+                            <a href="#">카탈로그</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">제품찾기</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">온라인 주문</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">Q&A</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">자료실</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="#">뉴스&미디어</a>
+                    <ul class="sub-ul">
+                        <li class="sub-li">
+                            <a href="#">YG-1 뉴스</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">비디오</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">전시회</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">홍보자료</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="introduce.html">회사소개</a>
+                    <ul class="sub-ul">
+                        <li class="sub-li">
+                            <a href="#">YG-1 소개</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">비전&미션</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">연혁</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">CEO</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">사업장소개</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">재무정보</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">윤리강령</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">사이버 감사실</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">공지사항</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="#">인재채용</a>
+                    <ul class="sub-ul">
+                        <li class="sub-li">
+                            <a href="#">채용안내</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">채용공고</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">입사지원</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">합격조회</a>
+                        </li>
+                        <li class="sub-li">
+                            <a href="#">채용문의</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    
+    <aside class="side-btn">
+        <ul>
+            <li class="q-me q-me01">
+                <a href="#" class="s-btn">
+                    <img src="img/ico_quick01.png" alt="icon">
+                    <span>제품정보</span>
+                </a>
+            </li>
+            <li class="q-me q-me02">
+                <a href="#" class="s-btn">
+                    <img src="img/ico_quick02.png" alt="icon">
+                    <span>네트워크</span>
+                </a>
+            </li>
+            <li class="q-me q-me03">
+                <a href="contact.html" class="s-btn">
+                    <img src="img/ico_quick03.png" alt="icon">
+                    <span>문의안내</span>
+                </a>
+            </li>
+            <li class="q-me q-me04">
+                <a href="#" class="s-btn">
+                    <img src="img/ico_quick04.png" alt="icon">
+                    <span>사이버 감사실</span>
+                </a>
+            </li>
+        </ul>
+        <button class="t-btn">
+            <a href="#"><img src="img/quick_top.png" alt="top"></a>
+        </button>
+    </aside>
+    <div class="sub-title">
+        <img src="img/contact_title_bg.jpg" alt="sub-title">
+        <div class="text-box">
+            <h1>고객지원</h1>
+            <h4>유진기업과의 파트너십을 통해 비즈니스 성장, 그 이상의 가치를 창출하실 수 있습니다.</h4>
+        </div>
+    </div>
+    <section class="contact1">
+        <div class="navi">
+            <div class="icon">
+                <img src="img/home.png" alt="home">
+            </div>
+            <ul class="q-menu">
+                <li class="q-menu-li qml1">
+                    <a href="#">고객지원</a>
+                    <img src="img/subnav01.png" alt="list-on">
+                    <ul class="sub-ul">
+                        <li class="sub-li"><a href="#">사업소개</a></li>
+                        <li class="sub-li"><a href="#">제품정보</a></li>
+                        <li class="sub-li"><a href="#">기업소개</a></li>
+                        <li class="sub-li"><a href="#">투자정보</a></li>
+                    </ul>
+                </li>
+                <li class="q-menu-li qml2">
+                    <a href="#">문의안내</a>
+                    <img src="img/subnav01_w.png" alt="list-on">
+                    <ul class="sub-ul">
+                        <li class="sub-li"><a href="#">자료안내</a></li>
+                        <li class="sub-li"><a href="#">당담자안내</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="text-box">
+                <h1>문의안내</h1>
+                <div class="btn-group">
+                    <button class="btn3">1:1문의</button>
+                    <button class="btn4">카카오톡문의</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact2">
+        <div class="container">
+            <div class="section-title">
+                <h1>1:1문의</h1>
+                <h5>제품/구매/납품/사업에 대한 문의를 남겨주시면 자세한 안내를 받아보실 수 있습니다.</h5>
+            </div>
+            <span class="small">* 표시는 필수 선택 및 입력 항목입니다.</span>
+            <div class="item-group">
+                <div class="item item-1">
+                    <p><sup>*</sup>구분</p>
+                </div>
+                <div class="item item-2">
+                    <input class="ra-btn" type="radio" name="ra" id="ra1">
+                    <label class="ra-label" for="ra1">
+                        <div class="box"><span></span></div>제품문의
+                    </label>
+                    <input class="ra-btn" type="radio" name="ra" id="ra2">
+                    <label class="ra-label" for="ra2">
+                        <div class="box"><span></span></div>구매문의
+                    </label>
+                    <input class="ra-btn" type="radio" name="ra" id="ra3">
+                    <label class="ra-label" for="ra3">
+                        <div class="box"><span></span></div>납품문의
+                    </label>
+                    <input class="ra-btn" type="radio" name="ra" id="ra4">
+                    <label class="ra-label" for="ra4">
+                        <div class="box"><span></span></div>사업문의
+                    </label>
+                </div>
+                <div class="item item-3">
+                    <label for="cname"><sup>*</sup>회사명</label>
+                </div>
+                <div class="item item-4">
+                    <input type="text" id="cname" placeholder="회사명을 입력해주세요.">
+                </div>
+                <div class="item item-5">
+                    <label for="name"><sup>*</sup>이름</label>
+                </div>
+                <div class="item item-6">
+                    <input type="text" id="name" placeholder="이름을 입력해주세요.">
+                </div>
+                <div class="item item-7">
+                    <label for="num"><sup>*</sup>연락처</label>
+                </div>
+                <div class="item item-8">
+                    <input type="text" id="num" placeholder="연락처를 입력해주세요.( - 없이 숫자만 입력)">
+                </div>
+                <div class="item item-9">
+                    <label for="mail"><sup>*</sup>이메일</label>
+                </div>
+                <div class="item item-10">
+                    <div class="mail-box">
+                        <div class="mail">
+                            <input type="text" id="mail">
+                            <div class="box">@</div>
+                            <input class="tb" type="text" id="mail" placeholder="직접 입력">
+                        </div>
+                        <select class="opt" name="" id="">
+                            <option value="">1</option>
+                            <option value="">1</option>
+                            <option value="">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item item-11">
+                    <label for="subject"><sup>*</sup>제목</label>
+                </div>
+                <div class="item item-12">
+                    <input type="text" id="subject">
+                </div>
+                <div class="item item-13">
+                    <label for="content"><sup>*</sup>내용</label>
+                </div>
+                <div class="item item-14">
+                    <textarea id="content" rows="10"></textarea>
+                </div>
+                <div class="item item-15">
+                    <label for="file">첨부 파일</label>
+                </div>
+                <div class="item item-16">
+                    <div class="file-box">
+                        <div class="box"></div>
+                        <input type="file" value="">
+                    </div>
+                    <span class="min">* 첨부파일의 용량은 최대 5MB 를 넘을 수 없으며, 등록 가능한 확장자명은 jpg, gif, pdf 입니다.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact3">
+        <div class="container">
+            <div class="section-title">
+                <h1>개인정보 수집 및 이용 동의</h1>
+            </div>
+            <div class="text-box">
+                <p>본 웹사이트 (이하 '웹사이트'라 함 )에서 운영하는 이용자의 개인정보를 보호하기 위하여 다음과 같이 개인정보취급방침을 제정하여 시행하고 있습니다.</p><br>
+                <h5>▪ 개인정보의 수집범위</h5>
+                <p>1) 문의사항 접수를 위하여 수입하는 정보<br>
+                    - 필수 정보 : 이름, 휴대전화번호, 전화번호, 이메일 주소 등</p><br><br>
+                <h5>▪ 개인정보의 수집목적 및 이용목적</h5>
+                <p>웹사이트는 다음과 같은 목적을 위하여 개인정보를 수집하고 있습니다.</p><br><br>
+                <h5>[비회원 개인정보 수집·이용 동의]</h5>
+                <p>- 목적 : 홈페이지 1:1문의 고객상담 등에서 문의 내용 확인, 요청사항 처리/상담<br>
+                    - 항목 : 회사명, 이름, 연락처, 이메일주소</p><br><br>
+                <h5>▪ 개인정보의 보유기간 및 이용기간</h5>
+                <p>회원의 개인정보는 다음과 같이 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다.<br>
+                    - 기간 : 문의 접수 및 상담 완료 후 6개월</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="ch-btn" id="ch-1">
+                <label for="ch-1">
+                    <div class="check-box">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    개인정보 수집 및 이용에 동의합니다. <sup>*</sup>
+                </label>
+                <button class="btn2">문의하기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row row1">
+                <div class="logo">
+                    <img src="img/globa_logo.png" alt="logo">
+                </div>
+                <div class="text-box">
+                    <ul>
+                        <li>
+                            <a href="#">개인정보 처리 방침</a>
+                        </li>
+                        <li>
+                            <a href="#">법적 고지</a>
+                        </li>
+                        <li>
+                            <a href="#">사이버 감사실</a>
+                        </li>
+                    </ul>
+                    <p>서울시 영등포구 여의대로 108 파크원 타워 1, 23층<br>
+                        Tel : 82-2-3704-3300 (02-3704-3300) Fax : 82-2-3704-5858 (02-3704-5858)<br><br>
+                        COPYRIGHT Ⓒ 2021 EUGENE CORP. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+            <div class="row row2">
+                <ul class="fa-menu">
+                    <li class="fa-menu-li">
+                        <a href="#">FAMILY SITE</a>
+                        <ul class="sub-ul">
+                            <li class="sub-li"><a href="#">유진그룹</a></li>
+                            <li class="sub-li"><a href="#">에이스하드웨어</a></li>
+                            <li class="sub-li"><a href="#">동양</a></li>
+                            <li class="sub-li"><a href="#">유진한일합섬</a></li>
+                            <li class="sub-li"><a href="#">유진투자증권</a></li>
+                            <li class="sub-li"><a href="#">유진자산운용</a></li>
+                            <li class="sub-li"><a href="#">유진투자선물</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+    <script>
+        var sc
+
+        $(window).scroll(function () {
+            sub_header()
+        })
+
+        function sub_header() {
+            sc = $(window).scrollTop()
+
+            $("header").removeClass("white")
+            $("header").removeClass("black")
+            if (sc < 400) {} else if (sc > 400) {
+                $("header").addClass("white")
+            }
+        }
+
+        $("header .menu").mouseenter(function () {
+            $("header .menu-bg, header .sub-ul").stop().slideDown()
+            $("header").addClass("white")
+        })
+        $("header .menu").mouseleave(function () {
+            $("header .menu-bg, header .sub-ul").stop().slideUp()
+            $("header").removeClass("white")
+
+            sub_header()
+        })
+
+        $(".ham-btn").click(function () {
+            $("body").toggleClass("site-on")
+        })
+        $(".site-map .menu-li").click(function () {
+
+            $(this).find(".sub-ul").stop().slideDown()
+            $(".site-map .menu-li").not(this).find(".sub-ul").stop().slideUp()
+        })
+
+        $(".contact1 .q-menu .q-menu-li").mouseenter(function () {
+
+            $(this).find(".sub-ul").stop().slideDown()
+            $(".contact1 .q-menu .q-menu-li").not(this).find(".sub-ul").stop().slideUp()
+        })
+        $(".contact1 .q-menu .q-menu-li").mouseleave(function () {
+
+            $(this).find(".sub-ul").stop().slideUp()
+        })
+
+        $("footer .fa-menu-li").mouseenter(function () {
+
+            $(this).find(".sub-ul").stop().slideDown()
+            $("footer .fa-menu-li").not(this).find(".sub-ul").stop().slideUp()
+        })
+        $("footer .fa-menu-li").mouseleave(function () {
+
+            $(this).find(".sub-ul").stop().slideUp()
+        })
+    </script>
+</body>
+
+</html>
